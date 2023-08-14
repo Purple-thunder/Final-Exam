@@ -1,0 +1,323 @@
+/* Global styling */
+body
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* text styling */
+h1,h2,h3,h4,h5,h6
+{
+    font-family: 'Montserrat', sans-serif;
+}
+p,a,li
+{
+    font-size: 1.2em;
+    font-family: 'Roboto',sans-serif;
+    text-decoration: none;
+}
+
+/* Page styling */
+body
+{
+    display: flex;
+    flex-direction: column;
+}
+
+/* css for heading */
+#header
+{
+    position: fixed;
+    z-index: 999;
+    height: 145px;
+    width: 100%;
+    display: flex;
+    background-color: #125784;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header > div > a > img
+{
+    width: auto;
+    height: 110px;
+    padding: 0 0 0 20px;
+}
+
+#header > nav > menu
+{
+    display: flex;
+    align-items: center;
+    padding: 0px;
+}
+#header > nav > menu > li
+{
+    text-decoration: none;
+    list-style: none;
+    padding: 0 20px;
+}
+#header > nav > menu > li:nth-child(2)
+{
+    border-right: 2px solid #efefef;
+    border-left: 2px solid #efefef;
+}
+#header > nav > menu > li> a
+{
+    color: #efefef;
+}
+
+#header > div > form 
+{
+    padding: 0 20px 0 0;
+
+}
+#header > div > form > input
+{
+    border: none;
+    outline: none;
+    padding: 7px 5px ;
+}
+#header > div > form > input::placeholder
+{
+    color: #141414;
+    font-weight: bold;
+}
+
+/* css for main */
+main
+{
+    padding: 145px 0 0 0;
+}
+
+section.introduction
+{
+    background-image: url('../images/img1.jpg');
+    width: 100%;
+    height: 70vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.introduction > div
+{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #efefef;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 2.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.paraImage
+{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    background-color: #f57f17;
+    color: #efefef;
+}
+section.paraImage > div
+{
+    box-sizing: border-box;
+}
+section.paraImage > div:last-child
+{
+    display: flex;
+
+}
+section.paraImage>div:first-child
+{
+    width: 70%;
+    padding: 30px;
+}
+section.paraImage>div:last-child
+{
+    width: 30%;
+}
+section.paraImage>div:last-child > img
+{
+    height: 100%;
+    width: 100%;
+}
+
+section.images
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+section.images >div
+{
+    width: 33.333%;
+    display: flex;
+}
+section.images >div > img
+{
+    width: 100%;
+}
+
+section.form
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5e35b1;
+    box-sizing: border-box;
+}
+
+section.form > form
+{
+    width: 40%;
+    margin: 30px 0;
+}
+
+section.form > form >div
+{
+    padding: 10px 0;
+    width: 100%;
+}
+section.form > form >div>input,
+section.form > form >div>textarea
+{
+    width: 100%;
+    outline: none;
+    border: none;
+}
+section.form > form >div>input,
+section.form > form >div>div>label,
+section.form > form >div>textarea,
+section.form > form >div>textarea
+{
+    font-family: 'Roboto',sans-serif;
+    padding:10px 5px;
+    border-radius: 1px;
+}
+section.form > form p
+{
+    margin: 0px;
+}
+section.form > form >div>input::placeholder,
+section.form > form >div>textarea::placeholder
+{
+    color: #141414;
+    box-sizing: border-box;
+    font-weight: 500;
+    opacity: 1;
+    
+}
+section.form > form >div:nth-child(4)
+{
+    display: flex;
+    flex-direction: column;
+    color: #efefef;
+}
+
+#footer
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #141414;
+    color: #efefef;
+}
+#footer > div 
+{
+    padding: 10px 20px;
+}
+#footer > div:last-child
+{
+    padding: 10px 40px;
+
+} 
+#footer > div > img
+{
+    height: 140px;
+    width: auto;
+}
+
+
+
+
+@media only screen and (max-width: 446px) 
+{
+    section.introduction > div
+    {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+
+    #header 
+    {
+        flex-direction: column;    
+        height: 205px;
+        justify-content: center;
+    }
+    #header > div:last-child
+    {
+        display: none;
+    } 
+    main
+    {
+        padding: 205px 0 0 0;
+    }
+    
+    section.paraImage
+    {
+        flex-direction: column;
+        
+    }
+    section.paraImage>div:first-child,
+    section.paraImage>div:last-child
+    {
+        width: 100%;
+    }
+    section.paraImage>div:last-child
+    {
+        padding: 0px;
+    }
+    
+    section.images>div:nth-child(1),
+    section.images>div:nth-child(2)
+    {
+        width: 50%;
+    }
+    section.images>div:nth-child(3)
+    {
+        width: 100%;
+    }
+    #footer 
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    section.form > form
+    {
+        width: 70%;
+        margin: 30px 0;
+    }
+    #footer > div
+    {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 376px) 
+{
+    
+}
+@media only screen and (max-width: 320px) 
+{
+
+}
+
